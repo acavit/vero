@@ -1,0 +1,9 @@
+#Dockerfile from https://github.com/microsoft/mssql-docker/blob/master/linux/preview/examples/mssql-polybase-fts-tools/Dockerfile
+# Base OS layer: Latest Ubuntu LTS
+FROM mcr.microsoft.com/mssql/server:2022-latest
+EXPOSE 1433
+
+USER mssql
+
+# Run SQL Server process
+CMD ["/opt/mssql/bin/sqlservr"
