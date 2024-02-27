@@ -1,9 +1,12 @@
 # Usage
 
-To tsart containers you can use
+To start containers you can use
 
-1 This command will not create the db_vero_digital - docker-compose up -d
-2 This command will create the db_vero_digital - ./start.sh
+1. This command will not create the db_vero_digital
+   - docker-compose up -d
+2. This command will create the db_vero_digital
+   - First make the "start.sh" script executable using " chmod 744 start.sh " command
+   - ./start.sh
 
 Commands are tested with Ubuntu 23.10
 
