@@ -26,13 +26,13 @@ else
             echo $var_create_vero_db_result_Failed
             if [[ $var_create_vero_db_result_Failed == "Sqlcmd: Error" ]]; then
                 echo -e "${Yellow}info:mssql service is not ready."
-                var_sql_socket_ready="Sqlcmd: Error"
+                var_sql_access_ready="Sqlcmd: Error"
                 counter_st=0
                 echo -e "${Yellow}info:will stop retrying after 10 attempts."
-                while [[ $var_sql_socket_ready =~ "Sqlcmd: Error" ]]; do
+                while [[ $var_sql_access_ready =~ "Sqlcmd: Error" ]]; do
                     echo -e "${Color_Off}Retrying...."
-                    var_sql_socket_ready=$(docker exec -it vero-sql-server sh -c '/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Un!q@to2023 -Q "CREATE DATABASE db_vero_digital"')
-                    echo -e "${Red} $var_sql_socket_ready"
+                    var_sql_access_ready=$(docker exec -it vero-sql-server sh -c '/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Un!q@to2023 -Q "CREATE DATABASE db_vero_digital"')
+                    echo -e "${Red} $var_sql_access_ready"
                     counter_st=$(($counter_st + 1))
                      if [[ $counter_st == "10" ]]; then
                         exit 1
