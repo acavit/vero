@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  mssql:
+    container_name: vero-sql-server
+    build:
+      context: .
+      dockerfile: Dockerfile.sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: Un!q@to2023
+    ports:
+      - 1433:1433
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: vero-backend
+    ports:
+      - "80:80"
+    depends_on:
+      - mssql
