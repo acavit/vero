@@ -7,6 +7,7 @@ To start containers you can use
 2. This command will create the db_vero_digital
    - First make the "start.sh" script executable using " chmod 744 start.sh " command
    - ./start.sh
+3. Browse http://http://localhost/QuickDbTest.php
 
 Commands are tested with Ubuntu 23.10
 
