@@ -1,3 +1,16 @@
+# Usage
+
+To tsart containers you can use
+This command will not create the db_vero_digital
+docker-compose up -d
+or
+This command will create the db_vero_digital
+./start.sh
+
+Commands are tested with Ubuntu 23.
+
+# -----
+
 Hello dear DevOps prospect!
 
 This repository is supposed to act as a playground for your submission.
