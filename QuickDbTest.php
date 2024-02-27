@@ -3,7 +3,7 @@
 
 final class QuickDbTest
 {
-    private const host = 'localhost';
+    private const host = 'vero-sql-server';
     private const db = 'db_vero_digital';
     private const user = 'sa';
     private const pass = 'Un!q@to2023';

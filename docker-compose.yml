@@ -2,10 +2,11 @@ version: "3.9"
 
 services:
   mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: vero-sql-server
-    build:
-      context: .
-      dockerfile: Dockerfile.sqlserver
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile.sqlserver
     environment:
       ACCEPT_EULA: "Y"
       MSSQL_SA_PASSWORD: Un!q@to2023
