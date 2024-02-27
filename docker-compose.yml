@@ -12,6 +12,8 @@ services:
       MSSQL_SA_PASSWORD: Un!q@to2023
     ports:
       - 1433:1433
+    volumes:
+      - sqlVolume:/var/opt/mssql
 
   backend:
     build:
@@ -22,3 +24,6 @@ services:
       - "80:80"
     depends_on:
       - mssql
+
+volumes:
+  sqlVolume:
